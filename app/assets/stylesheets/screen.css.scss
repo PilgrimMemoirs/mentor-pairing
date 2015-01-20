@@ -145,6 +145,10 @@ footer {
 	padding-bottom: 3em;
 }
 
+.page-footer {
+  clear: both;
+}
+
 .panel {
 	@include border-radius(5px);
 	@include box-shadow(3px 3px 1px $base-shadow);
@@ -463,16 +467,32 @@ label {
 }
 
 .appointments {
-  width: 60%;
+  width: 65%;
+  @media screen and (max-width: 719px){
+    float:none;
+    width: 85%;
+    margin: auto;
+  }
 }
 
-.personal {
+.info {
   width: 30%;
+  @media screen and (max-width: 719px){
+    float:none;
+    width: 85%;
+    margin: auto;
+  }
 }
 
+#twitter_logo {
+  color: red;
+  background-color: white;
+  border-bottom: none;
+}
 
 .profile h4 {
 	padding-top: 10px;
+  text-align: center;
 }
 
 .profile blockquote {
@@ -498,6 +518,12 @@ label {
 	width:40px;
 }
 
+.heading{
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1em;
+}
+
 .profile_content_wrap p:first-child {
 	padding-top: 0;
 	margin-top: 0;
@@ -508,8 +534,11 @@ label {
 }
 
 img.profpic{
-	margin: 10px 0 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .profile{
 	min-height: 90px;

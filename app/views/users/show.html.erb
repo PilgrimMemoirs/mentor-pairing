@@ -1,17 +1,18 @@
-<div class="personal left">
+<div class="info left">
   <div class="panel profile">
-    <h2><%=@user.name%></h2>
-
+    <div class="heading">
+      <h4><%=@user.name%></h4>
+    </div>
       <%= image_tag @user.gravatar_url, class: 'profpic' %>
 
     <div class="profile_content_wrap">
       <p>
-        <a href=<%= href_to_twitters_user(@user) %>><%= image_tag("twitter_black_logo.jpg")%></a>
+        <a href=<%= href_to_twitters_user(@user) %> id="twitter_logo"><%= image_tag("twitter_black_logo.jpg")%></a>
         <a href=<%= href_to_twitters_user(@user) %>><%= "@#{@user.try(:twitter_handle)}" %></a>
       </p>
 
       <% if @user.bio %>
-        <h4><%= @user.first_name %>'s bio:</h4>
+        <h3><%= @user.first_name %>'s bio:</h3>
         <blockquote>
           <%=  @user.bio%>
         </blockquote>
