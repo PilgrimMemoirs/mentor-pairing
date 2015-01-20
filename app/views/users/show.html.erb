@@ -11,7 +11,7 @@
         <a href=<%= href_to_twitters_user(@user) %>><%= "@#{@user.try(:twitter_handle)}" %></a>
       </p>
 
-      <% if @user.bio %>
+      <% if @user.has_bio %>
         <h3><%= @user.first_name %>'s bio:</h3>
         <blockquote>
           <%=  @user.bio%>
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <% if @user.interests %>
+  <% if @user.has_interests %>
     <div class="panel profile interests">
         <h4>I'd like to mentor on these topics:</h4>
         <blockquote><%=  @user.interests %></blockquote>

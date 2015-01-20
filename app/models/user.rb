@@ -17,6 +17,14 @@ class User < ActiveRecord::Base
     limit(10).order("total_kudos DESC")
   end
 
+  def has_bio
+    self.bio != ""
+  end
+
+  def has_interests
+    self.interests != ""
+  end
+
   def name
     [first_name, last_name].compact.join(" ")
   end
