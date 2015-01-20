@@ -36,7 +36,6 @@ class Availability < ActiveRecord::Base
       utc_eod_for_tz(now,tz).to_s)
   end
 
-
   def self.in_city(city_name)
     where(city: city_name)
   end

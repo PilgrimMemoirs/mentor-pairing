@@ -11,4 +11,20 @@ describe User do
     ryan = User.new(:first_name => "Ryan", :total_kudos => 42)
     ryan.pretty_name.should == "Ryan - 42"
   end
+
+  describe "has methods" do
+    let(:user){User.new(:first_name => "Ryan", :bio => "YOLO", :interests => "")}
+
+    it "should return true if user has bio" do
+      expect(user.has_bio).to be true
+    end
+
+    it "should return true if user has bio" do
+      expect(user.has_bio).to be true
+    end
+
+    it "should return true if user has no availabilities" do
+      expect(user.has_no_availabilities).to be true
+    end
+  end
 end
