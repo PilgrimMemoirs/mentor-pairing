@@ -161,6 +161,10 @@ footer {
     min-height: 65px;
   }
 
+.heading h2{
+  text-align: center;
+}
+
   a {
     background-color: #e9f193;
     border-bottom: 1px dashed $accent-light;
@@ -458,6 +462,15 @@ label {
  margin-right: 1em;
 }
 
+.appointments {
+  width: 60%;
+}
+
+.personal {
+  width: 30%;
+}
+
+
 .profile h4 {
 	padding-top: 10px;
 }
@@ -478,13 +491,8 @@ label {
 	background: none;
 }
 
-.profile_content_wrap {
-	width: 460px;
-}
-
 .profile_content_wrap img{
 	margin: 0 0 0 16px;
-	position: relative;
 	top:10px;
 	left: 20px;
 	width:40px;
@@ -493,7 +501,6 @@ label {
 .profile_content_wrap p:first-child {
 	padding-top: 0;
 	margin-top: 0;
-	text-align: right;
 }
 
 .profile_content_wrap blockquote {
@@ -501,19 +508,17 @@ label {
 }
 
 img.profpic{
-	float:left;
 	margin: 10px 0 0 0;
 }
 
 .profile{
-	min-height: 140px;
+	min-height: 90px;
 }
 
 .profile .content{
 	width: 75%;
 	padding:0px 10px;
 	margin: 0 10px;
-	display: inline-block;
 }
 
 /* $TABS ********************************************************************/
