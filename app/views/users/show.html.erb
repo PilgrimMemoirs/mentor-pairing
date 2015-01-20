@@ -31,7 +31,8 @@
 
 <div class="appointments right">
   <div class="heading panel">
-    <h2> Available Appointments </h2>
+    <h2> <% if @user.has_no_availabilities %> No <% end %>
+     Available Appointments </h2>
   </div>
 
   <% @user.availabilities.visible.order("start_time").each do |a| %>

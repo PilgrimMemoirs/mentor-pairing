@@ -25,6 +25,10 @@ class User < ActiveRecord::Base
     self.interests != ""
   end
 
+  def has_no_availabilities
+    self.availabilities.visible.empty?
+  end
+
   def name
     [first_name, last_name].compact.join(" ")
   end
